@@ -1,0 +1,2 @@
+# No external dependencies for Phase I (console todo app)
+# Using only Python standard library
