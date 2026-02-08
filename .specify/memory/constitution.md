@@ -1,63 +1,55 @@
-# In-Memory Console-Based Todo Application Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### I. Simplicity First
-Clean logic and readable code prioritized over complex solutions; Start with minimal viable implementation and add complexity only when necessary; All code must be understandable and maintainable.
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### II. In-Memory Data Handling
-Data stored in memory using native Python data structures; No external database or file persistence in Phase I; Data resets on program restart as expected behavior.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### III. Incremental Architecture Evolution
-System designed to evolve across multiple phases from console app to cloud deployment; Each phase builds upon previous work while maintaining core functionality; Architecture decisions consider future phase requirements.
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### IV. Clean Separation of Concerns
-Distinct layers for data, business logic, and presentation; Modular code structure enabling easy testing and maintenance; Clear interfaces between components.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### V. Production-Readiness at Each Phase
-Code quality maintained at production standards from Phase I; Proper error handling, input validation, and testing implemented at each phase; Security and performance considerations addressed early.
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-### VI. Phase-Based Development
+### [PRINCIPLE_6_NAME]
 
-Each phase has specific technology stack and success criteria; Clear boundaries between phases with defined deliverables; Code should be easily extensible to support next phase requirements.
 
-## Technology Standards
+[PRINCIPLE__DESCRIPTION]
 
-Phase I (Console App):
-- Python standard library preferred with no external dependencies
-- Console-based user interaction with clear menu systems
-- In-memory data structures for todo storage
-- CRUD operations with proper input validation
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-Phase II (Web App):
-- Next.js for frontend development
-- FastAPI for backend API
-- SQLModel for database modeling
-- Neon DB for persistent storage
-- RESTful API design principles
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-Phase III (AI Integration):
-- OpenAI ChatKit for natural language processing
-- Agents SDK for AI agent functionality
-- Official MCP SDK for integration
-- Secure and rate-limited AI interactions
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-Phase IV (Deployment):
-- Docker containerization
-- Minikube for local Kubernetes
-- Helm for package management
-- kubectl-ai for Kubernetes operations
-
-## Development Workflow
-
-- Test-driven development approach where applicable
-- Code reviews required for all changes
-- Clear documentation for each phase
-- Version control with meaningful commit messages
-- Continuous integration considerations for future phases
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-This constitution governs all development decisions for the Todo application project; All code must align with these principles; Changes to constitution require explicit approval and documentation of rationale; Each phase completion requires validation against success criteria defined in this constitution.
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-**Version**: 1.0.0 | **Ratified**: 2026-01-02 | **Last Amended**: 2026-01-02
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

@@ -4,6 +4,56 @@ This file is generated during init for the selected agent.
 
 You are an expert AI assistant specializing in Spec-Driven Development (SDD). Your primary goal is to work with the architext to build products.
 
+## Project-Specific Agent Usage
+
+This project is Phase II: Todo Full-Stack Web Application with the following technology stack:
+- **Frontend**: Next.js 16+ (App Router)
+- **Backend**: Python FastAPI
+- **ORM**: SQLModel
+- **Database**: Neon Serverless PostgreSQL
+- **Authentication**: Better Auth with JWT tokens
+
+### When to use specialized agents:
+
+- **Auth-Security Agent** (`auth-security-agent`): Use for all authentication and authorization tasks
+  - User signup/signin flows
+  - JWT token management
+  - Better Auth integration
+  - Security audits of authentication logic
+  - OAuth implementation
+
+- **Next.js Frontend Agent** (`nextjs-frontend-agent`): Use for all frontend development
+  - Building UI components and pages
+  - Creating responsive layouts
+  - Server-side data fetching
+  - Server/Client Component architecture
+  - Routing and navigation
+
+- **Neon Postgres Agent** (`neon-postgres-agent`): Use for all database operations
+  - Database schema design
+  - Creating migrations
+  - Query optimization
+  - Debugging database issues
+  - SQLModel model design
+
+- **FastAPI Backend Agent** (`fastapi-api-auth-db`): Use for all backend development
+  - Creating/updating REST API endpoints
+  - Request/response validation with Pydantic
+  - Integration with authentication
+  - Database models and queries
+  - Async database operations
+
+### Agentic Dev Stack Workflow
+Follow this workflow for all features:
+1. Write spec → Generate plan → Break into tasks → Implement via Claude Code
+2. No manual coding allowed
+3. Use appropriate specialized agents for each task type
+4. We will review the process, prompts, and iterations to judge each phase and project
+
+## Task context
+
+**Your Surface:** You operate on a project level, providing guidance to users and executing development tasks via a defined set of tools.
+
 ## Task context
 
 **Your Surface:** You operate on a project level, providing guidance to users and executing development tasks via a defined set of tools.
