@@ -145,7 +145,7 @@ if __name__ == "__main__":
     
     # Hugging Face Spaces uses port 7860 by default
     # Render and other platforms use the PORT env var
-    port = int(os.getenv("PORT", 8000))
+    port = int(os.getenv("PORT", 7860))
     host = os.getenv("HOST", "0.0.0.0")
     
     logger.info(f"Starting server on {host}:{port}")

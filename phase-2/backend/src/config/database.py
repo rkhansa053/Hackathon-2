@@ -10,6 +10,15 @@ db_url = settings.database_url
 if db_url.startswith("postgresql://"):
     db_url = db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
 
+# Fix for asyncpg: replace sslmode with ssl
+if "sslmode=" in db_url:
+    db_url = db_url.replace("sslmode=require", "ssl=require")
+    db_url = db_url.replace("sslmode=disable", "ssl=disable")
+    db_url = db_url.replace("sslmode=allow", "ssl=allow")
+    db_url = db_url.replace("sslmode=prefer", "ssl=prefer")
+    db_url = db_url.replace("sslmode=verify-ca", "ssl=verify-ca")
+    db_url = db_url.replace("sslmode=verify-full", "ssl=verify-full")
+
 if db_url.startswith("sqlite"):
     # SQLite specific configuration
     engine = create_async_engine(
